@@ -4,6 +4,7 @@ Before=root-suspend.service sleep.target
 
 [Service]:
 Type=oneshot
+# Adjust the script path to your needs
 ExecStartPre= /home/steffen/bin/kill-kodi.sh -15 ; /home/steffen/bin/tvheadend-check-recording-logs.sh
 ExecStart= /bin/systemctl stop tvheadend
 
