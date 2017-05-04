@@ -1,0 +1,13 @@
+[Unit]
+Description=local system suspend actions
+Before=root-suspend.service sleep.target
+
+[Service]
+Type=oneshot
+ExecStartPre= /home/steffen/bin/kill-kodi.sh
+ExecStart= /bin/systemctl stop docker-container@tvheadend.service
+
+[Install]
+WantedBy=sleep.target
+
+
