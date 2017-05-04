@@ -5,6 +5,7 @@ After=tvheadend-suspend.service
 
 [Service]
 Type=oneshot
+# Adjust the kernel modules for your needs
 ExecStart= /sbin/modprobe -r b2c2_flexcop_pci  ; /sbin/modprobe -r b2c2_flexcop ;  /sbin/modprobe -r cx24120 ; /sbin/modprobe -r cx24113 ; /sbin/modprobe -r cx24123
 
 [Install]
